@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown Timer</title>
+</head>
+<!-- CSS section -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        box-sizing: border-box;
+    }
+    
+    .count-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 20px;
+    }
+    
+    #timeDisplay {
+        margin-bottom: 40px;
+        font-size: 70px;
+        font-weight: bold;
+        color: #FF007F;
+    }
+    
+    .btn-container {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .btn {
+        padding: 20px 40px;
+        border: none;
+        border-radius: 40px;
+        color: white;
+        background-color: #FF007F;
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease;
+        outline: none;
+    }
+    
+    .btn:active {
+        background-color: #FFC0CB;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transform: scale(0.98);
+    }
+    
+    .btn:focus {
+        outline: 2px solid #FFC0CB;
+    }
+</style>
+
+<body>
+    <div class="count-container">
+        <span id="timeDisplay">00:00:00</span>
+        <div class="btn-container">
+            <button class="btn startButton" type="button">Start</button>
+            <button class="btn stopButton" type="button">Stop</button>
+            <button class="btn resetButton" type="button">Reset</button>
+
+        </div>
+    </div>
+    <script src="./CountDown.js"></script>
+</body>
+
+</html>
